@@ -49,7 +49,7 @@ export default function Home() {
         {/* Header */}
 
         {/* Hero */}
-        <section className="hero-bg px-6 py-24 md:py-32 text-center w-full relative">
+        <section className="hero-bg px-6 py-16 md:py-24 text-center w-full relative">
           <div className="flex justify-center gap-3 mb-6 flex-wrap">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold" style={{ background: 'linear-gradient(135deg, #fef3c7, #fde68a)', border: '1px solid #f59e0b', color: '#92400e' }}>
               ★ NYT & USA Today Bestselling Author
@@ -60,11 +60,11 @@ export default function Home() {
             
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold font-serif mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold font-serif mb-6 leading-tight text-white">
             Post-Apocalyptic Thrillers<br className="hidden md:block" /> That Don't Pull Punches
           </h1>
 
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-10 leading-relaxed">
             From EMP survival to zombie apocalypse to asteroid impacts — 
             50+ novels exploring what really happens when civilization falls apart. 
             Start with a free book, or find your next obsession.
@@ -74,7 +74,7 @@ export default function Home() {
             <Link href="/books" className="inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors">
               Explore the Books →
             </Link>
-            <Link href="/free-books" className="inline-flex items-center px-6 py-3 rounded-lg font-semibold border-2 border-border text-foreground hover:border-blue-600 hover:text-blue-600 transition-colors">
+            <Link href="/free-books" className="inline-flex items-center px-6 py-3 rounded-lg font-semibold text-blue-700 bg-white hover:bg-blue-50 transition-colors">
               Free Books
             </Link>
           </div>
