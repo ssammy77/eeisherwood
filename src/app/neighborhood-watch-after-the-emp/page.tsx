@@ -113,17 +113,6 @@ export default function NeighborhoodWatchPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="min-h-screen font-sans antialiased bg-background text-foreground">
-      <header className="px-6 py-4 flex justify-between items-center border-b border-border sticky top-0 bg-background/95 backdrop-blur z-50">
-        <Link href="/" className="font-serif text-2xl font-bold text-foreground">
-          EE Isherwood<span className="text-blue-600">.</span>
-        </Link>
-        <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
-          <Link href="/books" className="hover:text-foreground transition-colors">Books</Link>
-          <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
-          <Link href="/free-books" className="hover:text-foreground transition-colors">Free Books</Link>
-          
-        </nav>
-      </header>
 
       <section className="px-6 py-16 md:py-24 max-w-4xl mx-auto">
         <p className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: '#2563eb' }}>
@@ -232,10 +221,6 @@ export default function NeighborhoodWatchPage() {
           </a>
         </div>
       </section>
-
-      <footer className="border-t border-border px-6 py-10 text-center">
-        <p className="text-muted-foreground text-sm">© {new Date().getFullYear()} EE Isherwood. All rights reserved.</p>
-      </footer>
     </div>
     </>
   )

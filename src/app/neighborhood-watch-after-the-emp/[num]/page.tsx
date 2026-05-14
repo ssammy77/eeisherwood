@@ -89,6 +89,7 @@ export default async function NWBookPage({ params }: Props) {
         </Link>
         <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
           <Link href="/books" className="hover:text-foreground transition-colors">Books</Link>
+            <Link href="/newsletter" className="hover:text-foreground transition-colors">Newsletter</Link>
           <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
           <Link href="/free-books" className="hover:text-foreground transition-colors">Free Books</Link>
           
@@ -241,10 +242,6 @@ export default async function NWBookPage({ params }: Props) {
           ) : <div />}
         </div>
       </main>
-
-      <footer className="border-t border-border px-6 py-10 text-center">
-        <p className="text-muted-foreground text-sm">© {new Date().getFullYear()} EE Isherwood. All rights reserved.</p>
-      </footer>
     </div>
   )
 }

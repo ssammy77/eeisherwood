@@ -47,22 +47,6 @@ export default function Home() {
       
       <div className="min-h-screen font-sans antialiased bg-background text-foreground">
         {/* Header */}
-        <header className="px-6 py-4 flex justify-between items-center border-b border-border sticky top-0 bg-background/95 backdrop-blur z-50">
-          <Link href="/" className="font-serif text-2xl font-bold text-foreground">
-            EE Isherwood<span className="text-blue-600">.</span>
-          </Link>
-          <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
-            <Link href="/books" className="hover:text-foreground transition-colors">Books</Link>
-            <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
-            <Link href="/free-books" className="hover:text-foreground transition-colors">Free Books</Link>
-            
-          </nav>
-          <button className="md:hidden p-2 text-foreground">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </header>
 
         {/* Hero */}
         <section className="hero-bg px-6 py-24 md:py-32 text-center w-full relative">
@@ -176,18 +160,6 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-border px-6 py-10 text-center bg-gradient-to-r from-blue-600 to-blue-700">
-          <p className="text-white text-sm">
-            © {new Date().getFullYear()} EE Isherwood. All rights reserved.
-          </p>
-          <div className="flex justify-center gap-4 mt-3 text-sm text-blue-100">
-            
-            <span>·</span>
-            <a href="https://www.amazon.com/author/eeisherwood" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition-colors">Amazon</a>
-            <span>·</span>
-            <a href="https://www.goodreads.com/author/show/57907096.E_E_Isherwood" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition-colors">Goodreads</a>
-          </div>
-        </footer>
       </div>
     </>
   )

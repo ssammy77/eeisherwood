@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { authorSchema, websiteSchema, generateJsonLd } from '@/lib/schemas'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const geistSans = Geist({ subsets: ['latin'] })
 const geistMono = Geist_Mono({ subsets: ['latin'] })
@@ -73,7 +76,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: generateJsonLd(websiteSchema) }}
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

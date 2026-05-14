@@ -146,10 +146,6 @@ export default function SimilarBooksBlog() {
             </section>
           </div>
         </article>
-
-        <footer className="border-t border-border px-6 py-10 text-center">
-          <p className="text-muted-foreground text-sm">© {new Date().getFullYear()} EE Isherwood. All rights reserved.</p>
-        </footer>
       </div>
     </>
   )

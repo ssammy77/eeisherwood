@@ -90,6 +90,7 @@ export default async function MinusAmericaBookPage({ params }: Props) {
           </Link>
           <nav className="flex items-center gap-6 text-sm">
             <Link href="/books" className="text-muted-foreground hover:text-foreground transition-colors">Books</Link>
+            <Link href="/newsletter" className="text-muted-foreground hover:text-foreground transition-colors">Newsletter</Link>
             <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About</Link>
             <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">Blog</Link>
             <Link href="/free-books" className="text-muted-foreground hover:text-foreground transition-colors">Free Books</Link>
@@ -239,10 +240,6 @@ export default async function MinusAmericaBookPage({ params }: Props) {
           ) : <div />}
         </div>
       </main>
-
-      <footer className="border-t border-border px-6 py-10 text-center">
-        <p className="text-muted-foreground text-sm">© {new Date().getFullYear()} EE Isherwood. All rights reserved.</p>
-      </footer>
     </div>
   )
 }
