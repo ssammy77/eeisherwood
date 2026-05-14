@@ -1,65 +1,206 @@
-import Image from "next/image";
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { generateBreadcrumbSchema, generateJsonLd, canonicalUrl } from '@/lib/schemas'
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://eeisherwood.com'),
+  title: 'EE Isherwood — NYT Bestselling Post-Apocalyptic Thriller Author',
+  description: '50+ post-apocalyptic thrillers including the Neighborhood Watch EMP series and Sirens zombie apocalypse series. Start with a free book. "Binge-worthy." — Reader reviews',
+  keywords: [
+    'post-apocalyptic thriller',
+    'EMP survival fiction series',
+    'zombie apocalypse series',
+    'post-apocalyptic series to binge read',
+    'post-apocalyptic books like One Second After',
+    'NYT bestselling author',
+    'indie post-apocalyptic author',
+    'survival fiction series',
+    'post-apocalyptic series in order',
+  ],
+  authors: [{ name: 'EE Isherwood', url: 'https://eeisherwood.com' }],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: canonicalUrl('/'),
+    siteName: 'EE Isherwood',
+    title: 'EE Isherwood — NYT Bestselling Post-Apocalyptic Thriller Author',
+    description: '50+ post-apocalyptic thrillers. Start with a free book. Binge-worthy series from the USA Today bestselling author.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'EE Isherwood' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'EE Isherwood — Post-Apocalyptic Thriller Author',
+    description: '50+ post-apocalyptic thrillers. Start with a free book.',
+    images: ['/og-image.png'],
+  },
+  alternates: { canonical: canonicalUrl('/') },
+}
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: canonicalUrl('/') },
+])
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: generateJsonLd(breadcrumbSchema) }} />
+      
+      <div className="min-h-screen font-sans antialiased bg-background text-foreground">
+        {/* Header */}
+        <header className="px-6 py-4 flex justify-between items-center border-b border-border sticky top-0 bg-background/95 backdrop-blur z-50">
+          <Link href="/" className="font-serif text-2xl font-bold text-foreground">
+            EE Isherwood<span className="text-blue-600">.</span>
+          </Link>
+          <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
+            <Link href="/books" className="hover:text-foreground transition-colors">Books</Link>
+            <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
+            <Link href="/free-books" className="hover:text-foreground transition-colors">Free Books</Link>
+            
+          </nav>
+          <button className="md:hidden p-2 text-foreground">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </header>
+
+        {/* Hero */}
+        <section className="hero-bg px-6 py-24 md:py-32 text-center w-full relative">
+          <div className="absolute inset-0 bg-black/0" />
+          <div className="flex justify-center gap-3 mb-6 flex-wrap">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold" style={{ background: 'linear-gradient(135deg, #fef3c7, #fde68a)', border: '1px solid #f59e0b', color: '#92400e' }}>
+              ★ NYT & USA Today Bestselling Author
+            </span>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold" style={{ background: 'linear-gradient(135deg, #fef3c7, #fde68a)', border: '1px solid #f59e0b', color: '#92400e' }}>
+              📚 50+ Novels
+            </span>
+            
+          </div>
+
+          <h1 className="text-4xl md:text-6xl font-bold font-serif mb-6 leading-tight">
+            Post-Apocalyptic Thrillers<br className="hidden md:block" /> That Don't Pull Punches
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+            From EMP survival to zombie apocalypse to asteroid impacts — 
+            50+ novels exploring what really happens when civilization falls apart. 
+            Start with a free book, or find your next obsession.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link href="/books" className="inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+              Explore the Books →
+            </Link>
+            <Link href="/free-books" className="inline-flex items-center px-6 py-3 rounded-lg font-semibold border-2 border-border text-foreground hover:border-blue-600 hover:text-blue-600 transition-colors">
+              Free Books
+            </Link>
+          </div>
+        </section>
+
+        <div className="h-px max-w-2xl mx-auto bg-gradient-to-r from-transparent via-border to-transparent" />
+
+        {/* Featured Series */}
+        <section className="px-6 py-20 max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 font-serif">Popular Series</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            
+            <Link href="/sirens-of-the-zombie-apocalypse" className="group border border-border rounded-xl p-8 bg-card hover:border-blue-600/50 hover:shadow-lg hover:shadow-blue-600/10 transition-all hover:-translate-y-0.5 block">
+              <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#dc2626' }}>
+                8 Books · Zombie Apocalypse
+              </p>
+              <h3 className="text-xl font-bold mb-3 font-serif">Sirens of the Zombie Apocalypse</h3>
+              <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                The zombie apocalypse told from the ground floor. No military hero saves the world — 
+                just regular people making impossible choices as civilization collapses around them.
+              </p>
+              <span className="text-blue-600 font-semibold text-sm">Read in Order →</span>
+            </Link>
+
+            <Link href="/neighborhood-watch-after-the-emp" className="group border border-border rounded-xl p-8 bg-card hover:border-blue-600/50 hover:shadow-lg hover:shadow-blue-600/10 transition-all hover:-translate-y-0.5 block">
+              <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#2563eb' }}>
+                11 Books · Flagship Series
+              </p>
+              <h3 className="text-xl font-bold mb-3 font-serif">Neighborhood Watch: After the EMP</h3>
+              <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                When the lights go out, the real neighbors come out. A complete EMP survival series 
+                that shows what really happens when the grid goes down.
+              </p>
+              <span className="text-blue-600 font-semibold text-sm">Read in Order →</span>
+            </Link>
+
+            <Link href="/minus-america" className="group border border-border rounded-xl p-8 bg-card hover:border-blue-600/50 hover:shadow-lg hover:shadow-blue-600/10 transition-all hover:-translate-y-0.5 block">
+              <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#d97706' }}>
+                5 Books
+              </p>
+              <h3 className="text-xl font-bold mb-3 font-serif">Minus America</h3>
+              <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                America has been erased from the map — literally. Survivors navigate a world where 
+                their country no longer exists and every day is a fight to reclaim identity.
+              </p>
+              <span className="text-blue-600 font-semibold text-sm">Read in Order →</span>
+            </Link>
+
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/books" className="text-blue-600 font-semibold hover:underline">
+              See All 9 Series →
+            </Link>
+          </div>
+        </section>
+
+        <div className="h-px max-w-2xl mx-auto bg-gradient-to-r from-transparent via-border to-transparent" />
+
+        {/* Author Section */}
+        <section className="px-6 py-20 max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 font-serif">About EE Isherwood</h2>
+          <div className="flex flex-col items-center gap-6 mb-8">
+            <img 
+              src="/images/author-photo.jpg" 
+              alt="EE Isherwood" 
+              width={300}
+              className="rounded-2xl shadow-lg"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">EE Isherwood</strong> is a USA Today and New York Times bestselling author 
+              who writes post-apocalyptic thrillers.
+            </p>
+          </div>
+          <p className="text-muted-foreground leading-relaxed mb-8">
+            His 50+ book catalog covers multiple subgenres — EMP survival, zombie apocalypse, asteroid impacts, 
+            economic collapse, government failure, and more. He writes because he believes stories matter, 
+            particularly in a world where critical thinking and self-reliance are fading commodities.
+          </p>
+          <Link href="/about" className="text-blue-600 font-semibold hover:underline">
+            More About EE →
+          </Link>
+        </section>
+
+        {/* CTA Banner */}
+        <section className="px-6 py-16 bg-gradient-to-r from-blue-600 to-blue-700 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4 font-serif">Ready to Start Reading?</h2>
+          <p className="text-blue-100 max-w-xl mx-auto mb-8 text-lg">
+            Get your first free book and dive into post-apocalyptic adventures today.
+          </p>
+          <Link href="/free-books" className="inline-flex items-center px-8 py-4 rounded-lg font-bold text-blue-700 bg-white hover:bg-blue-50 transition-colors">
+            Start Reading for Free →
+          </Link>
+        </section>
+
+        {/* Footer */}
+        <footer className="border-t border-border px-6 py-10 text-center">
+          <p className="text-muted-foreground text-sm">
+            © {new Date().getFullYear()} EE Isherwood. All rights reserved.
+          </p>
+          <div className="flex justify-center gap-4 mt-3 text-sm text-muted-foreground">
+            
+            <span>·</span>
+            <a href="https://www.amazon.com/author/eeisherwood" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Amazon</a>
+            <span>·</span>
+            <a href="https://www.goodreads.com/author/show/57907096.E_E_Isherwood" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Goodreads</a>
+          </div>
+        </footer>
+      </div>
+    </>
+  )
 }
