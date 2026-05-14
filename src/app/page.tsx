@@ -66,7 +66,6 @@ export default function Home() {
 
         {/* Hero */}
         <section className="hero-bg px-6 py-24 md:py-32 text-center w-full relative">
-          <div className="absolute inset-0 bg-black/0" />
           <div className="flex justify-center gap-3 mb-6 flex-wrap">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold" style={{ background: 'linear-gradient(135deg, #fef3c7, #fde68a)', border: '1px solid #f59e0b', color: '#92400e' }}>
               ★ NYT & USA Today Bestselling Author
@@ -144,7 +143,7 @@ export default function Home() {
 
           <div className="text-center mt-10">
             <Link href="/books" className="text-blue-600 font-semibold hover:underline">
-              See All 9 Series →
+              See All 7 Series →
             </Link>
           </div>
         </section>
@@ -176,28 +175,17 @@ export default function Home() {
           </Link>
         </section>
 
-        {/* CTA Banner */}
-        <section className="px-6 py-16 bg-gradient-to-r from-blue-600 to-blue-700 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4 font-serif">Ready to Start Reading?</h2>
-          <p className="text-blue-100 max-w-xl mx-auto mb-8 text-lg">
-            Get your first free book and dive into post-apocalyptic adventures today.
-          </p>
-          <Link href="/free-books" className="inline-flex items-center px-8 py-4 rounded-lg font-bold text-blue-700 bg-white hover:bg-blue-50 transition-colors">
-            Start Reading for Free →
-          </Link>
-        </section>
-
         {/* Footer */}
-        <footer className="border-t border-border px-6 py-10 text-center">
-          <p className="text-muted-foreground text-sm">
+        <footer className="border-t border-border px-6 py-10 text-center bg-gradient-to-r from-blue-600 to-blue-700">
+          <p className="text-white text-sm">
             © {new Date().getFullYear()} EE Isherwood. All rights reserved.
           </p>
-          <div className="flex justify-center gap-4 mt-3 text-sm text-muted-foreground">
+          <div className="flex justify-center gap-4 mt-3 text-sm text-blue-100">
             
             <span>·</span>
-            <a href="https://www.amazon.com/author/eeisherwood" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Amazon</a>
+            <a href="https://www.amazon.com/author/eeisherwood" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition-colors">Amazon</a>
             <span>·</span>
-            <a href="https://www.goodreads.com/author/show/57907096.E_E_Isherwood" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Goodreads</a>
+            <a href="https://www.goodreads.com/author/show/57907096.E_E_Isherwood" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition-colors">Goodreads</a>
           </div>
         </footer>
       </div>

@@ -115,6 +115,12 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@layer utilities {
+  .hero-bg {
+    background-image: linear-gradient(to bottom, oklch(0.99 0 0), oklch(0.98 0 0));
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
