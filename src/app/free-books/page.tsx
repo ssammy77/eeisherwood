@@ -93,7 +93,7 @@ export default function FreeBooksPage() {
 
         <div className="text-center py-8 border-t border-border">
           <p className="text-muted-foreground mb-4">Want more free books and author updates?</p>
-          <Link href="/contact" className="text-blue-600 font-semibold hover:underline">
+          <Link href="/newsletter" className="text-blue-600 font-semibold hover:underline">
             Join the newsletter for free book announcements →
           </Link>
         </div>
