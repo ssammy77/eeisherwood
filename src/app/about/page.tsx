@@ -116,6 +116,14 @@ export default function AboutPage() {
             </p>
           </div>
 
+          <div className="mt-8 pt-8 border-t border-border">
+            <Link href="/about/interview"
+                  className="inline-flex items-center px-6 py-3 rounded-lg font-semibold border-2 border-border text-foreground hover:border-blue-600 hover:text-blue-600 transition-colors">
+              Read the Author Interview →
+            </Link>
+          </div>
+          </div>
+
           <div className="mt-12 pt-8 border-t border-border">
             <h2 className="text-2xl font-bold font-serif mb-6">Find the Books</h2>
             <div className="flex gap-4 flex-wrap">
