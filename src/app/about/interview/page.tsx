@@ -274,16 +274,6 @@ export default function InterviewPage() {
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-2">How do you come up with a series of books?</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    There are several reasons to write a book. I wanted to write about a topic on 
-                    my own, no matter if it will make money. I wanted to make money from a topic. 
-                    Most of mine are the second, which means I have to pick subjects that are 
-                    selling on Amazon.
-                  </p>
-                </div>
-
-                <div>
                   <h3 className="font-bold text-lg mb-2">How do you keep the action flowing?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Basic concept is to always end with an open loop. A piece of action that is a 
