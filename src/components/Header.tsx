@@ -9,6 +9,7 @@ export default function Header() {
       <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
         <Link href="/books" className="hover:text-foreground transition-colors">Books</Link>
         <Link href="/newsletter" className="hover:text-foreground transition-colors">Newsletter</Link>
+        <Link href="/about/interview" className="hover:text-foreground transition-colors">Interview</Link>
         <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
         <Link href="/free-books" className="hover:text-foreground transition-colors">Free Books</Link>
       </nav>

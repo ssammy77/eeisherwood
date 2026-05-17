@@ -122,7 +122,6 @@ export default function AboutPage() {
               Read the Author Interview →
             </Link>
           </div>
-          </div>
 
           <div className="mt-12 pt-8 border-t border-border">
             <h2 className="text-2xl font-bold font-serif mb-6">Find the Books</h2>
