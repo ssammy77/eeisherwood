@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { canonicalUrl } from '@/lib/schemas'
 
 export const metadata: Metadata = {
   title: 'Minus America — EE Isherwood',
