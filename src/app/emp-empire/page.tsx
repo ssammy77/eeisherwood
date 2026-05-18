@@ -10,6 +10,8 @@ const seriesColor = '#16a34a'
 export const metadata: Metadata = {
   title: 'EMP Empire — EE Isherwood',
   description: 'A standalone EMP thriller. An astronaut stranded on the ISS returns to Earth to find civilization collapsed — and one last pocket of light in Alabama.',
+  openGraph: { url: canonicalUrl('/emp-empire'), },
+  alternates: { canonical: canonicalUrl('/emp-empire') },
 }
 
 const books = empEmpireBooks

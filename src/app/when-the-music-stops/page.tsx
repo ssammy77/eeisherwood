@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { canonicalUrl } from '@/lib/schemas'
 
 export const metadata: Metadata = {
   title: 'When the Music Stops — EE Isherwood',
   description: 'Standalone post-apocalyptic novel. A world where the music finally stopped.',
+  openGraph: { url: canonicalUrl('/when-the-music-stops'), },
+  alternates: { canonical: canonicalUrl('/when-the-music-stops') },
 }
 
 export default function MusicStopsPage() {

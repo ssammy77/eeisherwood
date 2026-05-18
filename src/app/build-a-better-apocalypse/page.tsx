@@ -10,6 +10,8 @@ const seriesColor = '#059669'
 export const metadata: Metadata = {
   title: 'Build A Better Apocalypse — EE Isherwood',
   description: '3-book EMP survival series with a twist — Frank Douglas has prepared his whole life for the apocalypse, but nothing prepared him for what\'s coming next.',
+  openGraph: { url: canonicalUrl('/build-a-better-apocalypse'), },
+  alternates: { canonical: canonicalUrl('/build-a-better-apocalypse') },
 }
 
 const books = buildBetterApocalypseBooks

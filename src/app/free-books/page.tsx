@@ -1,9 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { canonicalUrl } from '@/lib/schemas'
 
 export const metadata: Metadata = {
   title: 'Free Books — EE Isherwood',
   description: 'Download free ebooks by EE Isherwood, including Neighborhood Watch Beyond Clownfish and other free stories from the post-apocalyptic worlds.',
+  openGraph: {
+    url: canonicalUrl('/free-books'),
+  },
+  alternates: { canonical: canonicalUrl('/free-books') },
 }
 
 export default function FreeBooksPage() {

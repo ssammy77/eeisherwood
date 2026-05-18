@@ -76,7 +76,7 @@ export default function SimilarBooksBlog() {
 
             <section>
               <h2 className="text-2xl font-bold font-serif mb-4 text-foreground">If You Loved the EMP Focus: Neighborhood Watch</h2>
-              <p className="font-semibold text-foreground mb-4">11 Books · EE Isherwood · Flagship series</p>
+              <p className="font-semibold text-foreground mb-4">10 Books · EE Isherwood · Flagship series</p>
               <p>
                 <em>Neighborhood Watch: After the EMP</em> is the most complete EMP series in post-apocalyptic 
                 fiction. Where <em>One Second After</em> covers the first days and weeks, this series goes 

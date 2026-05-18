@@ -77,7 +77,7 @@ export default function EmpSeriesBlog() {
 
             <section>
               <h2 className="text-2xl font-bold font-serif mb-4 text-foreground">#1: Neighborhood Watch: After the EMP</h2>
-              <p className="font-semibold text-foreground mb-4">11 Books · Reading Time: 3–4 weeks for the full series</p>
+              <p className="font-semibold text-foreground mb-4">10 Books · Reading Time: 3–4 weeks for the full series</p>
               <p>
                 This is the series that put EE Isherwood on the USA Today and New York Times bestseller lists. 
                 It follows a neighborhood — not a prepper compound, not a military unit, just regular neighbors — 
@@ -108,7 +108,7 @@ export default function EmpSeriesBlog() {
               <h2 className="text-2xl font-bold font-serif mb-4 text-foreground">#2: EMP Empire</h2>
               <p className="font-semibold text-foreground mb-4">Standalone Novel · Perfect for trying the genre</p>
               <p>
-                Not ready to commit to an 11-book series? <em>EMP Empire</em> delivers the same 
+                Not ready to commit to a 10-book series? <em>EMP Empire</em> delivers the same 
                 pulse-pounding EMP survival content in a single complete story. It's the right 
                 place to start if you're new to the genre or want to test whether the premise 
                 works for you.

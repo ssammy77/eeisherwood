@@ -10,6 +10,8 @@ const seriesColor = '#7c3aed'
 export const metadata: Metadata = {
   title: 'End Days — EE Isherwood',
   description: '6-book post-apocalyptic series co-written with Craig Martelle. A father and son fight to find each other across a world that keeps ending.',
+  openGraph: { url: canonicalUrl('/end-days'), },
+  alternates: { canonical: canonicalUrl('/end-days') },
 }
 
 const books = endDaysBooks

@@ -10,6 +10,8 @@ const seriesColor = '#ea580c'
 export const metadata: Metadata = {
   title: '1000 Miles of Bad Road — EE Isherwood',
   description: '5-book EMP survival series set in the Neighborhood Watch universe. Joey inherits a trucking company and must drive 1,000 miles through post-apocalyptic America to get home.',
+  openGraph: { url: canonicalUrl('/1000-miles-of-bad-road'), },
+  alternates: { canonical: canonicalUrl('/1000-miles-of-bad-road') },
 }
 
 const books = thousandMilesBooks

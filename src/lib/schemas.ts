@@ -13,7 +13,8 @@ export const authorSchema: Person = {
   sameAs: [
     'https://www.amazon.com/author/eeisherwood',
     'https://www.goodreads.com/author/show/57907096.E_E_Isherwood',
-    'https://www.facebook.com/eeisherwood',
+    'https://www.facebook.com/sincethesirens',
+    'https://www.instagram.com/eeisherwood',
     'https://twitter.com/eeisherwood',
   ],
   jobTitle: 'Post-Apocalyptic Thriller Author',

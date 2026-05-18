@@ -101,7 +101,7 @@ export default function Home() {
 
             <Link href="/neighborhood-watch-after-the-emp" className="group border border-border rounded-xl p-8 bg-card hover:border-blue-600/50 hover:shadow-lg hover:shadow-blue-600/10 transition-all hover:-translate-y-0.5 block">
               <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#2563eb' }}>
-                11 Books · Flagship Series
+                10 Books · Flagship Series
               </p>
               <h3 className="text-xl font-bold mb-3 font-serif">Neighborhood Watch: After the EMP</h3>
               <p className="text-muted-foreground text-sm mb-4 leading-relaxed">

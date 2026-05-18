@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { empEmpireBooks } from '@/lib/emp-empire-books'
-import { generateBookSchema, generateBreadcrumbSchema, generateReviewSchema } from '@/lib/schemas'
+import { generateBookSchema, canonicalUrl, generateBreadcrumbSchema, generateReviewSchema } from '@/lib/schemas'
 
 interface Props {
   params: Promise<{ num: string }>
@@ -15,6 +15,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${book.title} — EE Isherwood`,
     description: book.shortBlurb,
+    openGraph: { url: canonicalUrl(`/emp-empire/${num}`), },
+    alternates: { canonical: canonicalUrl(`/emp-empire/${num}`) },
   }
 }
 

@@ -1,9 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { canonicalUrl } from '@/lib/schemas'
 
 export const metadata: Metadata = {
   title: 'All Books by EE Isherwood — Post-Apocalyptic Thrillers',
   description: 'Browse all 50+ books by NYT bestselling author EE Isherwood. 9 complete series from EMP survival to zombie apocalypse to asteroid strikes.',
+  openGraph: {
+    url: canonicalUrl('/books'),
+  },
+  alternates: { canonical: canonicalUrl('/books') },
 }
 
 const series = [

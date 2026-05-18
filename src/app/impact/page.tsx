@@ -10,6 +10,8 @@ const seriesColor = '#0891b2'
 export const metadata: Metadata = {
   title: 'Impact — EE Isherwood',
   description: '6-book asteroid impact series. When trillion-dollar rocks fall from space, middle America has to survive without any help from the people who caused it.',
+  openGraph: { url: canonicalUrl('/impact'), },
+  alternates: { canonical: canonicalUrl('/impact') },
 }
 
 const books = impactBooks

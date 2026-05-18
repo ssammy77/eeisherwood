@@ -4,7 +4,9 @@ import { generateBreadcrumbSchema, canonicalUrl } from '@/lib/schemas';
 
 export const metadata: Metadata = {
   title: 'Neighborhood Watch: After the EMP — EE Isherwood',
-  description: '11-book EMP survival series following Frank Douglas and his neighbors as they go from suburban life to survival mode when the electrical grid goes down.',
+  description: '10-book EMP survival series following Frank Douglas and his neighbors as they go from suburban life to survival mode when the electrical grid goes down.',
+  openGraph: { url: canonicalUrl('/neighborhood-watch-after-the-emp'), },
+  alternates: { canonical: canonicalUrl('/neighborhood-watch-after-the-emp') },
 }
 
 const books = [

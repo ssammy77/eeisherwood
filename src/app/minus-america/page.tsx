@@ -4,6 +4,8 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Minus America — EE Isherwood',
   description: 'In a flash, the attack reduces every American to a pile of clothes. The few survivors remaining must piece together what happened, and stay alive in a post-apocalyptic disaster zone.',
+  openGraph: { url: canonicalUrl('/minus-america'), },
+  alternates: { canonical: canonicalUrl('/minus-america') },
 }
 
 const books = [

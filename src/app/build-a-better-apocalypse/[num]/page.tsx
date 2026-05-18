@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { buildBetterApocalypseBooks } from '@/lib/build-better-apocalypse-books'
-import { generateBookSchema, generateBreadcrumbSchema, generateReviewSchema } from '@/lib/schemas'
+import { generateBookSchema, canonicalUrl, generateBreadcrumbSchema, generateReviewSchema } from '@/lib/schemas'
 
 interface Props {
   params: Promise<{ num: string }>
@@ -18,6 +18,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${book.title} — EE Isherwood`,
     description: book.shortBlurb,
+    openGraph: { url: canonicalUrl(`/build-a-better-apocalypse/${num}`), },
+    alternates: { canonical: canonicalUrl(`/build-a-better-apocalypse/${num}`) },
   }
 }
 

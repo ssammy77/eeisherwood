@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { canonicalUrl } from '@/lib/schemas'
 import './embed.css'
 
 export const metadata: Metadata = {
   title: 'Newsletter — EE Isherwood',
   description: 'Get free book announcements, updates, and exclusive content from NYT bestselling author EE Isherwood.',
+  openGraph: { url: canonicalUrl('/newsletter'), },
+  alternates: { canonical: canonicalUrl('/newsletter') },
 }
 
 export default function NewsletterPage() {

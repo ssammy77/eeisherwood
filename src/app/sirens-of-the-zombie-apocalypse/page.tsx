@@ -8,6 +8,8 @@ const SITE_URL = 'https://eeisherwood.com'
 export const metadata: Metadata = {
   title: 'Sirens of the Zombie Apocalypse — EE Isherwood',
   description: '8-book zombie apocalypse series following regular people as civilization collapses. Ground-floor view of the end of the world. Free prequel novella included.',
+  openGraph: { url: canonicalUrl('/sirens-of-the-zombie-apocalypse'), },
+  alternates: { canonical: canonicalUrl('/sirens-of-the-zombie-apocalypse') },
 }
 
 const seriesUrl = '/sirens-of-the-zombie-apocalypse'

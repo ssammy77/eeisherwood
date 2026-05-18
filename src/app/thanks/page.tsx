@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { canonicalUrl } from '@/lib/schemas'
 
 export const metadata: Metadata = {
   title: 'Thank You — EE Isherwood',
   description: 'Thanks for subscribing to EE Isherwood\'s newsletter.',
+  openGraph: { url: canonicalUrl('/thanks'), },
+  alternates: { canonical: canonicalUrl('/thanks') },
 }
 
 export default function ThanksPage() {
