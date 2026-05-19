@@ -84,22 +84,6 @@ export default async function MinusAmericaBookPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(book.faqs)) }}
         />
       )}
-
-      <header className="border-b border-border">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/books" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            ← All Books
-          </Link>
-          <nav className="flex items-center gap-6 text-sm">
-            <Link href="/books" className="text-muted-foreground hover:text-foreground transition-colors">Books</Link>
-            <Link href="/newsletter" className="text-muted-foreground hover:text-foreground transition-colors">Newsletter</Link>
-            <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About</Link>
-            <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">Blog</Link>
-            <Link href="/free-books" className="text-muted-foreground hover:text-foreground transition-colors">Free Books</Link>
-          </nav>
-        </div>
-      </header>
-
       <main className="max-w-4xl mx-auto px-6 py-12">
         <Link href={seriesUrl} className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors">
           ← Minus America Series
